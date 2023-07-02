@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Submitted Data</h1>
+    <ul>
+        {% for data in form_data %}
+            <li>Name: {{ data.name }}</li>
+            <li>Email: {{ data.email }}</li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
